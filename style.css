@@ -1,0 +1,38 @@
+body {
+  margin: 40px auto;
+  max-width: 650px;
+  line-height: 1.6;
+  font-size: 18px;
+  color: #444;
+  padding: 0 10px;
+}
+
+header {
+  text-align: center;
+}
+
+a {
+  color: hotpink;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  width: 50%;
+  margin: auto;
+}
+
+.nav_link {
+  font-size: 22px;
+  margin: auto;
+}
+
+.about li {
+  display: inline;
+  padding: 7px;
+}
+
+.public_key {
+  font-size: 12px;
+}
