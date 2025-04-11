@@ -18,21 +18,70 @@
 
     <div class="navigation">
       <a class="nav_link" href="../index.html">Home</a>
-      <!-- <a class="nav_link" href="../blog/index.html">Blog</a> -->
     </div>
   </header>
 
   <section class="experience">
     <h1>Professional Experience</h1>
 
-    <h3>DDN Storage — Senior Development Engineer</h3>
+    <h2>Headline — Software Engineering Contractor</h2>
+    <p>January 2025 – Present</p>
+    <details>
+      <p>Headline is a venture capital firm that uses modern data analysis and data science techniques to determine
+        which companies to invest in. My focus is on their backend systems: ETL pipelines, batch-processing jobs,
+        and APIs feeding data to their Ruby on Rails web application. </p>
+      <p>With headline, I work in a variety of domains — API development, data engineering, DevOps, and
+        more — and with many technologies including Rust, Bash, Python, and Ruby.</p>
+
+      <h3>Points of Interest</h3>
+
+      <h4>Initiated an ongoing effort to tackle technical debt</h4>
+      <p>During my initial few weeks with Headline, I noticed a significant amount of technical debt in the backend
+        repository. After familiarizing myself with their codebase more I wrote an RFC detailing concerns with the
+        codebase and possible solutions to each. The RFC was well-received and led to an ongoing initiative to tackle
+        these concerns at both organizational and technical levels. While this is an ongoing effort with many
+        steps ahead, I have made significant progress in addressing the first steps of this effort. This includes:</p>
+      <ul>
+        <li>Configuring and enabling branch protection rules such as to enforce the creation of pull requests and
+          prevent
+          pushing straight to the <code>master</code> branch.</li>
+        <li>Introducing automated checks for code formatting rules using pre-commit hooks, with future plans to
+          introduce
+          CI/CD for this purpose.</li>
+        <li>Identifying and mitigating potential security vulnerabilities with the use of
+          <a href="https://github.com/EmbarkStudios/cargo-deny"><code>cargo-deny</code></a>.
+        </li>
+        <li>Leading an effort to improve testing practices focusing on fixing flaky tests and improving test coverage.
+        </li>
+        <li>Setting up a centralized location for internal documentation using a VCS-managed
+          <a href="https://github.com/rust-lang/mdBook">mdBook</a> static site.
+        </li>
+      </ul>
+
+      <h4>Contributed to multiple cross-functional efforts involving refactoring, bug fixes, and feature development
+      </h4>
+      <p>Working closely with data scientists, API developers, and others on the backend team, I participated in the
+        development of several long-term efforts. For example:</p>
+      <ul>
+        <li>Refactoring a batch processing job that derives training/inference data from points extracted from a
+          timeseries database.</li>
+        <li>Rewriting a Ruby on Rails endpoint into an Axum/Rust microservice, eliminating the use of a costly API in
+          the process</li>
+        <li>Fixing various bugs across complex systems that required tracing logic in multiple languages across many
+          binaries, scripts, and libraries.</li>
+
+      </ul>
+    </details>
+
+
+    <h2>DDN Storage — Senior Development Engineer</h2>
     <p>April 2024 – July 2024</p>
     <details>
       <p>With DDN I worked on the <i>EXAScaler Management Framework</i> using Rust and Actix-Web. I also found myself
         often working on DevOps-adjacent tasks focused on improvements made towards their CI/CD pipelines.</p>
     </details>
 
-    <h3>Svix — Software Engineer</h3>
+    <h2>Svix — Software Engineer</h2>
     <p>February 2022 – August 2023</p>
     <details>
       <p>Svix is a SaaS offering making it simple to reliably and securely dispatch webhooks. While it was first
@@ -41,14 +90,15 @@
       <p>Working for Svix required wearing a variety of hats, including DevOps-adjacent skills, maintaining a Go-based
         CLI, or making updates to the client-side libraries for several languages as API updates were made.</p>
 
-      <h4>Points of Interest</h4>
-      <h5>Made significant contributions in the transition from FastAPI/Python to Axum/Rust</h5>
+      <h3>Points of Interest</h3>
+
+      <h4>Made significant contributions in the transition from FastAPI/Python to Axum/Rust</h4>
       <p>As one of the earlier members of the Svix team, I spent much of my employment aiding in a gradual
         transition to the Rust-based web service. This included maintaining both codebases to keep feature parity while
         porting endpoints to Rust over time. It often required making changes to the AWS infrastructure with Terraform
         such as to gradually roll-over to the Rust-backed service.</p>
 
-      <h5>Maintained CI/CD pipelines using GitHub Actions</h5>
+      <h4>Maintained CI/CD pipelines using GitHub Actions</h4>
       <p>I made many improvements to the CI/CD pipelines for Svix during my employment with them. This included:</p>
       <ul>
         <li>Introducing automated checks to ensure new dependencies use compatible, open-source licenses.</li>
@@ -57,12 +107,12 @@
           quality.</li>
       </ul>
 
-      <h5>Independently developed a microservice for testing webhook receipt</h5>
+      <h4>Independently developed a microservice for testing webhook receipt</h4>
       <p>Part of Svix's offering was a range of utilities for their direct clients to use and that the clients of
         their direct clients could use. During my time at Svix, I rewrote one such tool, <i>Svix Play</i>,
         independently, as a part of a scaling effort.</p>
 
-      <h5>Independently developed a microservice for mutating webhook payloads</h5>
+      <h4>Independently developed a microservice for mutating webhook payloads</h4>
       <p>Transformations are a feature offered by Svix that allows their indirect clients to write basic JavaScript
         functions to mutate a webhook payload before it is dispatched to them in a serverless fashion.</p>
       <p>I was given the task of implementing the first iteration of this feature as well as maintaining changes to
@@ -71,7 +121,7 @@
         user-defined JavaScript in a secure sandbox. This required integrating the Deno runtime into an Axum/Rust
         server and writing logic to enforce RAM usage and execution time constraints for each script run.</p>
 
-      <h5>Independently developed the first iteration of <i>Omniqueue</i>, a FOSS Rust library</h5>
+      <h4>Independently developed the first iteration of <i>Omniqueue</i>, a FOSS Rust library</h4>
       <p><i>Omniqueue</i> is a library created and maintained by Svix. It is meant to be an abstraction layer over
         queue-like data systems. It allows writing generic code that relies on a message queue to be able to use
         any one of multiple backends.</p>
@@ -79,7 +129,7 @@
     </details>
 
 
-    <h3>NXLog — Rust Developer</h3>
+    <h2>NXLog — Rust Developer</h2>
     <p>May 2021 – February 2022</p>
     <details>
       <p>At NXLog I worked mostly with backend web development (using Actix-Web/Rust) and distributed systems for
@@ -96,22 +146,22 @@
     </details>
 
 
-    <h3>Self-Employed — Software Developer</h3>
+    <h2>Self-Employed — Miscellaneous Short-Term Contracts</h2>
     <p>June 2019 – February 2022</p>
     <p>September 2023 – March 2024</p>
-    <p>August 2024 – Present</p>
+    <p>August 2024 – December 2024</p>
     <details>
       <p>While starting my career and while in between jobs, I work on various short-term contracts, most often
         using
         technologies like Rust, C++, Python, and JavaScript.</p>
 
-      <h4>Clients of Interest</h4>
-      <h5>Completed an MVP for a fullstack fintech product</h5>
+      <h3>Clients of Interest</h3>
+      <h4>Completed an MVP for a fullstack fintech product</h4>
       <p>This role included the development of a complete MVP of a fintech platform for Adora Services LLC. The product
         used Actix-Web for the backend, and Yew for the frontend. While both back and front used Rust primarily, this
         role often involved FFI between JavaScript and Wasm-compiled Rust.</p>
 
-      <h5>Contributed to an ad/malware-blocking service</h5>
+      <h4>Contributed to an ad/malware-blocking service</h4>
       <p>For a SaaS product offered by Sicher Surfen GmbH, I took on two major tasks:</p>
       <p>I first extended a Rust DNS server to support per-request filtration parameters via an infrequently-used
         extension to the DNS specification. This allowed filtering requests such that one could block ads, known
@@ -120,7 +170,7 @@
       <p>Second, I contributed to their client-side app written in Go which would insert these filtration parameters to
         every DNS request made on that device.</p>
 
-      <h5>Helped introduce PostgreSQL support to <i>SeaORM</i></h5>
+      <h4>Helped introduce PostgreSQL support to <i>SeaORM</i></h4>
       <p>For the Rust-based library <i>SeaORM</i> to support PostgreSQL, I had to alter a schema definition and
         discovery system (<i>SeaSchema</i>) to work with the internal tables used by PostgreSQL.</p>
     </details>
