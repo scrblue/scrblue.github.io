@@ -1,6 +1,6 @@
 body {
   margin: 40px auto;
-  max-width: 650px;
+  max-width: 750px;
   line-height: 1.6;
   font-size: 18px;
   color: #444;
@@ -35,4 +35,12 @@ a {
 
 .public_key {
   font-size: 12px;
+}
+
+.experience h1 {
+  font-size: 1.75em;
+}
+
+.experience h2 {
+  font-size: 1.25em;
 }
